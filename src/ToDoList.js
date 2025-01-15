@@ -3,7 +3,7 @@ import './ToDoList.css';
 
 function ToDoList() {
 
-  const [todos, setTodos] = useState(['make coffee', 'walk dog', 'eat breakfast']);
+  const [todos, setTodos] = useState([]);
   const [newTodo, setNewTodo] = useState('');
 
   function addTodo() {
@@ -41,7 +41,7 @@ function ToDoList() {
     <div className='to-do-list'>
       <h1 className='title'>To Do List</h1>
       <input className='input' type='text' placeholder='add a todo...' value={newTodo} onChange={handleInputChange}/>
-      <button className='button' onClick={addTodo}>Add</button>
+      <button className='add-button' onClick={addTodo}>Add</button>
       <ol>
         {todos.map((todo, index) =>
           <li key={index}>
